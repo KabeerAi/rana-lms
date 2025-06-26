@@ -10,6 +10,7 @@ LibraryManager* LibraryManager::instance = nullptr;
 int main() {
     SystemInitializer::initializeSystem();
     while (true) {
+        system("color F0");
         system("cls"); // Clear screen for cleaner display
         cout << endl;
         cout << "+----------------------------------+\n";
@@ -42,7 +43,7 @@ int main() {
 
             User* user = LibraryManager::getInstance()->login(uname, pwd);
             if (user) {
-                cout << "\n* Login successful! Welcome, " << user->getRole() << "!\n";
+                cout << "\n* Login successful! Welcome, " << user->getUsername() << "!\n";
                 system("pause");
                 user->displayMenu();
             } else {

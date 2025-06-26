@@ -134,7 +134,7 @@ public:
         cout << "  Username: ";
         getline(cin, username);
 
-        // Check if the username already exists
+        // Checking if the username already exists
         if (LibraryManager::getInstance()->findUserByUsername(username)) {
             cout << "* Username already exists. Please choose a different username.\n";
             return;
